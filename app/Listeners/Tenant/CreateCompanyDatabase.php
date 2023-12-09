@@ -4,9 +4,7 @@ namespace App\Listeners\Tenant;
 
 use App\Events\Tenant\CompanyCreated;
 use App\Tenant\Database\DatabaseManager;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Database\DatabaseManager as DatabaseDatabaseManager;
-use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Support\Facades\DB;
 
 class CreateCompanyDatabase
 {

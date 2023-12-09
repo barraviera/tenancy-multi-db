@@ -57,8 +57,7 @@ class CompanyController extends Controller
         ]);
 
         // vamos chamar o evento que cria o banco de dados para o tenant
-        //event( new CompanyCreated($company) );
-        CompanyCreated::dispatch( $company );
+        event( new CompanyCreated($company) );
 
         dd($company);
 
