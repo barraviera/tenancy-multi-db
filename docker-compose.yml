@@ -25,6 +25,15 @@ services:
             - redis
             - mailpit
             - mysql
+            - phpmyadmin
+    phpmyadmin:
+        image: 'phpmyadmin:latest'
+        ports:
+            - 8080:80
+        networks:
+            - sail
+        environment:
+            - PMA_ARBITRARY=1
     redis:
         image: 'redis:alpine'
         ports:

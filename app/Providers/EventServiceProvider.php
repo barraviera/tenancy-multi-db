@@ -23,10 +23,9 @@ class EventServiceProvider extends ServiceProvider
         // ao disparar este evento CompanyCreated iremos roda um listener CreateCompanyDatabase
         // para gerar o arquivo de evento rodamos no terminal:
         // ./vendor/bin/sail artisan event:generate
-        CompanyCreated::class => 
-            [
-                CreateCompanyDatabase::class,
-            ],
+        CompanyCreated::class => [
+            CreateCompanyDatabase::class,
+        ],
     ];
 
     /**

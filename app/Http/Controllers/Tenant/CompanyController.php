@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Company;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Event;
 
 class CompanyController extends Controller
 {
@@ -56,7 +57,8 @@ class CompanyController extends Controller
         ]);
 
         // vamos chamar o evento que cria o banco de dados para o tenant
-        event( new CompanyCreated($company) );
+        //event( new CompanyCreated($company) );
+        CompanyCreated::dispatch( $company );
 
         dd($company);
 
